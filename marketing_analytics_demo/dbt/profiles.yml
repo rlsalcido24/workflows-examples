@@ -3,7 +3,7 @@ marketing_analytics_demo:
   outputs:
     dev:
       host: "{{ env_var('DBT_HOST') }}"
-      http_path: "/sql/1.0/endpoints/{{ env_var('DBT_DBSQL_WAREHOUSE_ID') }}"
+      http_path: "sql/protocolv1/o/{{ env_var('DBT_ORG_ID') }}/{{ env_var('DBT_CLUSTER_ID') }}"
       catalog: users
       schema: tahir_fayyaz
       threads: 8
